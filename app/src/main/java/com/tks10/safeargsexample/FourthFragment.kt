@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_fourth.view.*
-import kotlinx.android.synthetic.main.fragment_third.view.*
 import kotlinx.android.synthetic.main.fragment_third.view.contentTextView
 import kotlinx.android.synthetic.main.fragment_third.view.valueTextView
 

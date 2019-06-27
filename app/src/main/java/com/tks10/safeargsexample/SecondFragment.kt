@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_second.view.*
-import kotlinx.android.synthetic.main.fragment_second.view.nextButton
 
 class SecondFragment : Fragment() {
     private val args: SecondFragmentArgs by navArgs()
