@@ -47,6 +47,22 @@
                 android:name="value"
                 app:argType="integer"/>
 
+        <action
+                android:id="@+id/action_third_to_fourth"
+                app:destination="@id/fourthFragment"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/fourthFragment"
+            android:name="com.tks10.safeargsexample.FourthFragment"
+            android:label="fragment_fourth"
+            tools:layout="@layout/fragment_fourth">
+
+        <argument
+                android:name="myData"
+                app:argType="com.tks10.safeargsexample.MyData"/>
+
     </fragment>
 
 </navigation>

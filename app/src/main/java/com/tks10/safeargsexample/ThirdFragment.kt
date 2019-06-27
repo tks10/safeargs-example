@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_third.view.*
 
@@ -20,5 +21,16 @@ class ThirdFragment : Fragment() {
 
         view.contentTextView.text = args.content
         view.valueTextView.text = args.value.toString()
+
+        view.nextButton.setOnClickListener {
+            val myData = MyData(
+                args.content,
+                args.value,
+                "LGTM!!"
+            )
+
+            val action = ThirdFragmentDirections.actionThirdToFourth(myData)
+            findNavController().navigate(action)
+        }
     }
 }
