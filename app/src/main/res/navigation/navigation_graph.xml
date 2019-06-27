@@ -28,6 +28,25 @@
                 android:name="content"
                 app:argType="string"/>
 
+        <action
+                android:id="@+id/action_second_to_third"
+                app:destination="@id/thirdFragment"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/thirdFragment"
+            android:name="com.tks10.safeargsexample.ThirdFragment"
+            android:label="fragment_third"
+            tools:layout="@layout/fragment_third">
+
+        <argument
+                android:name="content"
+                app:argType="string"/>
+        <argument
+                android:name="value"
+                app:argType="integer"/>
+
     </fragment>
 
 </navigation>

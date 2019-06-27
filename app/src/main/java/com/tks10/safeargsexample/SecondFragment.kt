@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_second.view.*
+import kotlinx.android.synthetic.main.fragment_second.view.nextButton
 
 class SecondFragment : Fragment() {
     private val args: SecondFragmentArgs by navArgs()
@@ -18,5 +20,12 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.resultTextView.text = args.content
+        view.nextButton.setOnClickListener {
+            val content = args.content
+            val value = view.valueEditText.text.toString().toInt()
+
+            val action = SecondFragmentDirections.actionSecondToThird(content, value)
+            findNavController().navigate(action)
+        }
     }
 }
