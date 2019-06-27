@@ -17,7 +17,10 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.nextButton.setOnClickListener {
-            findNavController().navigate(R.id.action_first_to_second)
+            val content = view.contentEditText.text.toString()
+
+            val action = FirstFragmentDirections.actionFirstToSecond(content)
+            findNavController().navigate(action)
         }
     }
 }
