@@ -9,6 +9,7 @@
             android:id="@+id/contentEditText"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:gravity="center"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/nextButton"
             app:layout_constraintStart_toStartOf="parent"
